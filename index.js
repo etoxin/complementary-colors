@@ -1,47 +1,64 @@
 var Color = require("color");
 
-var CompColors = function (colorInput) {
+var complementaryColors = function (colorInput) {
 
-    var color = Color(colorInput);
-    var hslColor = Color(color.hslString());
-
-    return {
-        primary: {
-            color1: hslColor.rgb()
-        },
-        complementary: {
-            color1: hslColor.rgb(),
-            color2: hslColor.rotate(180).rgb()
-        },
-        triad: {
-            color1: hslColor.rgb(),
-            color2: hslColor.rotate(120).rgb(),
-            color3: hslColor.rotate(120).rgb()
-        },
-        analogous: {
-            color1: hslColor.rotate(-30).rgb(),
-            color2: hslColor.rgb(),
-            color3: hslColor.rotate(30).rgb()
-        },
-        splitComplementary: {
-            color1: hslColor.rgb(),
-            color2: hslColor.rotate(-30).rgb(),
-            color3: hslColor.rotate(30).rgb()
-        },
-        tetradic: {
-            color1: hslColor.rgb(),
-            color2: hslColor.rotate(90).rgb(),
-            color3: hslColor.rotate(180).rgb(),
-            color4: hslColor.rotate(240).rgb()
-        },
-        square: {
-            color1: hslColor.rgb(),
-            color2: hslColor.rotate(90).rgb(),
-            color3: hslColor.rotate(180).rgb(),
-            color4: hslColor.rotate(270).rgb()
-        }
-    }
+    this.color = Color(colorInput);
+    this.hslColor = Color(this.color.hslString());
 };
 
+complementaryColors.prototype.primary = function () {
+    return [
+        this.hslColor.rgb()
+    ]
+};
 
-module.exports = CompColors;
+complementaryColors.prototype.complementary = function () {
+    return [
+        this.hslColor.rgb(),
+        this.hslColor.rotate(180).rgb()
+    ]
+};
+
+complementaryColors.prototype.triad = function () {
+    return [
+        this.hslColor.rgb(),
+        this.hslColor.rotate(120).rgb(),
+        this.hslColor.rotate(120).rgb()
+    ]
+};
+
+complementaryColors.prototype.analogous = function () {
+    return [
+        this.hslColor.rotate(-30).rgb(),
+        this.hslColor.rgb(),
+        this.hslColor.rotate(30).rgb()
+    ]
+};
+
+complementaryColors.prototype.splitComplementary = function () {
+    return [
+        this.hslColor.rgb(),
+        this.hslColor.rotate(-30).rgb(),
+        this.hslColor.rotate(30).rgb()
+    ]
+};
+
+complementaryColors.prototype.tetradic = function () {
+    return [
+        this.hslColor.rgb(),
+        this.hslColor.rotate(90).rgb(),
+        this.hslColor.rotate(180).rgb(),
+        this.hslColor.rotate(240).rgb()
+    ]
+};
+
+complementaryColors.prototype.square = function () {
+    return [
+        this.hslColor.rgb(),
+        this.hslColor.rotate(90).rgb(),
+        this.hslColor.rotate(180).rgb(),
+        this.hslColor.rotate(270).rgb()
+    ]
+};
+
+module.exports = complementaryColors;
