@@ -8,11 +8,11 @@ Get complementary colors.
 
 ## Usage
 
-    var complimentaryColors = require('complimentary-colors');
+    var complimentaryColors = require('complementary-colors');
     
 ## Examples
 
-    var compColors = require('complimentary-colors');
+    var compColors = require('complementary-colors');
     
     var myColor = new compColors('#00ff00');
     
