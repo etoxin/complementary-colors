@@ -4,7 +4,7 @@ Get complementary colors.
 
 ## Installtion
 
-    $ npm install complimentary-colors
+    $ npm install complementary-colors
 
 ## Usage
 
