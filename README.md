@@ -4,15 +4,21 @@ Get complementary colors.
 
 ## Installtion
 
-    $ npm install complementary-colors
+```console
+$ npm install complementary-colors
+```
 
 ## Usage
 
-    var complimentaryColors = require('complementary-colors');
+```js
+var complimentaryColors = require('complementary-colors');
+```
 
 ## Constructors
 
-    var myColor = new compColors('#00ff00');
+```js
+var myColor = new compColors('#00ff00');
+```
 
 ## Getters
 
@@ -22,10 +28,12 @@ Base color in all examples is `#00ff00`
 
 Returns the original color as a rgb object.
 
-    myColor.primary();
+```js
+myColor.primary();
 
-	// returns
-	// [ { r: 0, g: 255, b: 0 } ]
+// returns
+// [ { r: 0, g: 255, b: 0 } ]
+```
 
 ### Complementary color scheme
 
@@ -33,10 +41,12 @@ Complementary Colors are any two Hues positioned exactly opposite each other on 
 
 Returns an array with two rgb color objects.
 
-    myColor.complementary();
+```js
+myColor.complementary();
 
-	// Returns
-	// [ { r: 0, g: 255, b: 0 }, { r: 255, g: 0, b: 255 } ]
+// Returns
+// [ { r: 0, g: 255, b: 0 }, { r: 255, g: 0, b: 255 } ]
+```
 
 ### Triadic color scheme 
 
@@ -44,13 +54,14 @@ A triadic color scheme uses three colors that are evenly spaced around the color
 
 Returns an array with three rgb color objects.
 
-	myColor.triad();
+```js
+myColor.triad();
 
-	// Returns
-	// [ { r: 0, g: 255, b: 0 },
-	//   { r: 0, g: 0, b: 255 },
-	//   { r: 255, g: 0, b: 0 } ]
-
+// Returns
+// [ { r: 0, g: 255, b: 0 },
+//   { r: 0, g: 0, b: 255 },
+//   { r: 255, g: 0, b: 0 } ]
+```
    
 ### Square color scheme
 
@@ -58,26 +69,30 @@ The square color scheme is similar to the Triadic, but with all four colors spac
 
 Returns an array with four rgb color objects.
 
-	myColor.square();
+```js
+myColor.square();
 
-	// Returns
-	// [ { r: 0, g: 255, b: 0 },
-	//   { r: 0, g: 127, b: 255 },
-	//   { r: 255, g: 128, b: 0 },
-	//   { r: 255, g: 0, b: 255 } ]
+// Returns
+// [ { r: 0, g: 255, b: 0 },
+//   { r: 0, g: 127, b: 255 },
+//   { r: 255, g: 128, b: 0 },
+//   { r: 255, g: 0, b: 255 } ]
+```
 
 ### Analogous color scheme
 
 Analogous color schemes use colors that are next to each other on the color wheel.
 
 Returns an array with three rgb color objects.
-    
-    myColor.analogous();
 
-	// returns 
-	// [ { r: 128, g: 255, b: 0 },
-	//   { r: 128, g: 255, b: 0 },
-	//   { r: 0, g: 255, b: 0 } ]
+```js    
+myColor.analogous();
+
+// returns 
+// [ { r: 128, g: 255, b: 0 },
+//   { r: 128, g: 255, b: 0 },
+//   { r: 0, g: 255, b: 0 } ]
+```
 
 ### Split-Complementary color scheme 
 
@@ -85,33 +100,38 @@ The split-complementary color scheme is a variation of the complementary color s
 
 Returns an array with three rgb color objects.
 
-    myColor.splitComplementary();
+```js
+myColor.splitComplementary();
 
-	// returns 
-	// [ { r: 0, g: 255, b: 0 },
-	//   { r: 128, g: 255, b: 0 },
-	//   { r: 0, g: 255, b: 0 } ]
+// returns 
+// [ { r: 0, g: 255, b: 0 },
+//   { r: 128, g: 255, b: 0 },
+//   { r: 0, g: 255, b: 0 } ]
+```
 
 ### Rectangle (tetradic) color scheme 
 
 The rectangle or tetradic color scheme uses four colors arranged into two complementary pairs.
 
-    myColor.tetradic();
+```js
+myColor.tetradic();
 
-	// returns
-	// [ { r: 0, g: 255, b: 0 },
-	//   { r: 0, g: 127, b: 255 },
-	//   { r: 255, g: 128, b: 0 },
-	//   { r: 127, g: 0, b: 255 } ]
-
+// returns
+// [ { r: 0, g: 255, b: 0 },
+//   { r: 0, g: 127, b: 255 },
+//   { r: 255, g: 128, b: 0 },
+//   { r: 127, g: 0, b: 255 } ]
+```
     
 # Examples
 
-    var compColors = require('complementary-colors');
-    
-    var myColor = new compColors('#00ff00');
-    
-    console.log(myColor.complementary());
+```js
+var compColors = require('complementary-colors');
 
-	// Returns
-	// [ { r: 0, g: 255, b: 0 }, { r: 255, g: 0, b: 255 } ]
+var myColor = new compColors('#00ff00');
+
+console.log(myColor.complementary());
+
+// Returns
+// [ { r: 0, g: 255, b: 0 }, { r: 255, g: 0, b: 255 } ]
+```
