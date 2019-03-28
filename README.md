@@ -1,5 +1,7 @@
 # complementary-colors
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d6b2147ade304ed286ae1324673f7c06)](https://app.codacy.com/app/etoxin/complementary-colors?utm_source=github.com&utm_medium=referral&utm_content=etoxin/complementary-colors&utm_campaign=Badge_Grade_Dashboard)
+
 Get complementary colors.
 
 ## Installtion
