@@ -11,7 +11,7 @@ $ npm install complementary-colors
 ## Usage
 
 ```js
-var complimentaryColors = require('complementary-colors');
+var complementaryColors = require('complementary-colors');
 ```
 
 ## Constructors
