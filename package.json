@@ -1,6 +1,6 @@
 {
   "name": "complementary-colors",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Get complementary colors",
   "main": "index.js",
   "scripts": {
